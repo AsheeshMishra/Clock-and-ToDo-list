@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript TUTORIAL</title>
+</head>
+<body>
+    <h1>Welcome to my Javascript Tutorial</h1>
+    <div class="container">
+        <button id="click">Click Me</button>
+    </div>
+    <div id="firstcontainer" class="container">
+        <p>this is a paragraph</p>
+    </div>
+
+    <div id ="hello">
+      <h3> hey this is javascript tutorial </h3>
+    </div>
+    <div id="home"></div>
+    <div id ="house">
+        <h3> hey this is javascript tutorial </h3>
+      </div>
+      <div>
+          <!-- see line 110 -->
+          <button type="button" onclick= "myFunction()">Sort_Alphabetically</button>
+          <button type="button" onclick= "myFunction1()">Sort_Numerically</button>
+      </div>
+    <button type="button" onclick='document.getElementById("hello").innerHTML="hi i am  javascript"'>Click</button>
+    <button type="button" onclick='func()'>Click</button>
+    
+   
+    <!-- <script src="js\index.js"></script> -->
+
+    <script>
+        var fruits=["apple","mango","berry","lichi","papaya"]
+        document.getElementById("hello").innerHTML=fruits.toString();
+
+        document.getElementById("hello").innerHTML=fruits.join("#");
+        
+        //returns poppped element
+        //document.getElementById("hello").innerHTML=fruits.pop()
+        
+        //document.getElementById("hello").innerHTML=fruits
+       
+        //push
+         fruits.push("banana");
+         document.getElementById("hello").innerHTML=fruits;
+         //returns position of pushed element
+       // document.getElementById("hello").innerHTML=fruits.push('orange');
+
+        fruits[fruits.length]='blueberry';
+        document.getElementById("hello").innerHTML=fruits;
+
+        // delete fruits[0]
+        //document.getElementById("hello").innerHTML=fruits; 
+        
+        fruits.splice(2,0,'kiwi','melon')
+        document.getElementById("hello").innerHTML=fruits;
+         
+        fruits.splice(0,1);
+        document.getElementById("hello").innerHTML=fruits; 
+        
+
+        var name=["ashish","navin","neel","nitin","mukesh"];
+        var names=["ashish","12",5,"44","4"];
+        var namee=name.concat(names);
+        document.getElementById("hello").innerHTML=namee;
+        var name1=name.concat(namee,names);
+        document.getElementById("hello").innerHTML=name1;
+
+        var name12 = name.concat('saifu');
+        document.getElementById("hello").innerHTML=name12;
+        
+
+        var vitc=fruits.slice(4)
+        document.getElementById("hello").innerHTML=vitc;
+        
+        var vitc=fruits.slice(2,4)
+        document.getElementById("hello").innerHTML=vitc;
+        /*Finding Max and Min Values in an Array
+There are no built-in functions for finding the highest or lowest value in a JavaScript array.*/
+fruits.sort();
+document.getElementById("hello").innerHTML=fruits;
+        
+fruits.reverse();
+document.getElementById("home").innerHTML=fruits;
+
+var arr=[1,56,73,98,56,23];
+arr.sort(function compare(a,b){
+    if(a>b){ return 1; }
+    else if(a<b){ return -1;}
+    else{return 0;}
+} )
+//above function can be written as below
+//arr.sort(function(a, b){return a - b});
+arr.reverse(function compare(a,b){
+    if(a<b){ return 1; }
+    else if(a>b){ return -1;}
+    else{return 0;}
+} )
+
+//function(a, b){return b - a}
+
+document.getElementById("hello").innerHTML=arr;
+
+var points=[40,100,90,80,60,110];
+document.getElementById("hello").innerHTML=points;
+
+function myFunction(){
+    points.sort();
+    document.getElementById("home").innerHTML=points;
+}
+function myFunction1(){
+    points.sort(function(a,b){return a-b});
+    document.getElementById("home").innerHTML=points;
+}
+ </script>
+
+</body>
+</html>
